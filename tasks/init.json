@@ -1,0 +1,11 @@
+{
+  "description": "Inspect the value of system facts",
+  "supports_noop": true,
+  "input_method": "stdin",
+  "parameters": {
+    "fact": {
+      "description": "The name of the fact to retrieve",
+      "type": "String"
+    }
+  }
+}
