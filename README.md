@@ -23,19 +23,19 @@ This module requires either Puppet enterprise or Bolt to function.
 
 ## Usage
 
-There are a number of ways to execute the facter_task task. The examples below return the operating symstem family. 
+There are a number of ways to execute the facter_task task. The examples below return the operating system family. 
 
 VIA PE-console see link_here
 
 Via BOLT more information here LINK
 ```bolt
-bolt task facter_task osfamily
+bolt task facter_task fact=osfamily
 ```
 
 Via the PE CLI, more information here LINK
 
 ```pe
-puppet task facter_task osfamily
+puppet task facter_task fact=osfamily
 ```
 
 ## Reference
