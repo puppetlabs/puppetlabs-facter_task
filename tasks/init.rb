@@ -5,14 +5,14 @@ require 'json'
 require 'open3'
 
 def get(fact)
-  cmd_string = "/opt/puppetlabs/puppet/bin/facter #{fact}"
+  cmd_string = "facter #{fact}"
   stdout, stderr, status = Open3.capture3(cmd_string)
   raise Puppet::Error, stderr if status != 0
   { status: stdout.strip }
 end
 
-args = JSON.parse(STDIN.read)
-fact = args['fact']
+params = JSON.parse(STDIN.read)
+fact = params['fact']
 
 begin
   result = get(fact)
