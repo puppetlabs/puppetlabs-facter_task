@@ -1,11 +1,5 @@
-# Changelog
+## Release 0.1.1
+This is the initial release of the facter task.
 
-All notable changes to this project will be documented in this file.
-
-## Release 0.1.0
-
-**Features**
-
-**Bugfixes**
-
-**Known Issues**
+**Features
+- Allows the retrieval of a fact from a node.
