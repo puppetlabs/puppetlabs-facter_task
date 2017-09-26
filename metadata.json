@@ -3,6 +3,7 @@
   "version": "0.1.1",
   "author": "puppet",
   "summary": "Tasks that inspect the value of system facts",
+  "description": "Tasks that inspect the value of system facts",
   "license": "Apache-2.0",
   "source": "",
   "dependencies": [],
