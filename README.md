@@ -14,16 +14,23 @@
 This module provides the facter_task task. This task allows you to discover facts about remote machines in your infrastructure.
 
 ## Requirements
+This module is compatible with Puppet Enterprise and Puppet Bolt.
 
-This module requires Puppet Enterprise 2017.3 or later to be installed on the machine from which you are running task commands (the controller node). Machines receiving task requests must be Puppet agents.
+Puppet Enterprise 2017.3 or later has to be installed on the machine from which you are running task commands (the controller node). Machines receiving task requests must be Puppet agents.
+OR
+Puppet Bolt 0.3.2 or later has to be installed on the machine from which you are running task commands. Machines receiving task requests must have SSH or WinRM services enabled.
 
 ## Usage
 
-To run a task, use the task command, specifying the fact you want to retrieve.
+To run a facter_task task, use the task command, specifying the fact you want to retrieve.
 
-1. On the command line, run `puppet task facter_task fact=<FACT>`.
+* With PE on the command line, run `puppet task run facter_task fact=<FACT>`.
+* With Bolt on the command line, run `bolt task run facter_task fact=<FACT>`.
 
-For example, to check the operating system family on a machine, run `puppet task facter_task fact=osfamily`
+For example, to check the operating system family on a machine, run:
+
+* With PE, run `puppet task run facter_task fact=osfamily --nodes neptune`
+* With Bolt, run `bolt task run facter_task fact=osfamily --nodes neptune --modules ~/modules`
 
 You can also run tasks in the PE console. See PE task documentation for complete information.
 
@@ -37,8 +44,5 @@ For a complete list of facts that are supported, see the Puppet [core facts](htt
 
 To display help for the facter_task task, run `puppet task show facter_task`
 
-To show help for the task CLI, run `puppet task run --help`
-
-
-
+To show help for the task CLI, run `puppet task run --help` or `bolt task run --help`
 
