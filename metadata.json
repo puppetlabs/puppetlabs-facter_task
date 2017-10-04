@@ -1,6 +1,6 @@
 {
   "name": "puppetlabs-facter_task",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "puppet",
   "summary": "Tasks that inspect the value of system facts",
   "description": "Tasks that inspect the value of system facts",

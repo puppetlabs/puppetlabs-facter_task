@@ -1,3 +1,8 @@
+## Release 0.1.2
+
+### Fixed
+- Fixed locales project name.
+
 ## Release 0.1.1
 This is the initial release of the facter task.
 
