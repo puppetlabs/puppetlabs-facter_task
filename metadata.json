@@ -5,7 +5,7 @@
   "summary": "Tasks that inspect the value of system facts",
   "description": "Tasks that inspect the value of system facts",
   "license": "Apache-2.0",
-  "source": "",
+  "source": "https://github.com/puppetlabs/puppetlabs-facter_task",
   "dependencies": [],
   "operatingsystem_support": [
     {
