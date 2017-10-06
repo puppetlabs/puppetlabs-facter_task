@@ -5,7 +5,7 @@ require 'json'
 require 'open3'
 
 def get(fact)
-  cmd_string = "facter #{fact}"
+  cmd_string = "facter -p #{fact}"
   stdout, stderr, status = Open3.capture3(cmd_string)
   raise Puppet::Error, stderr if status != 0
   { status: stdout.strip }
