@@ -1,3 +1,11 @@
+## Release 0.1.3
+
+### Fixed
+- Readme updates.
+
+### Features
+- Retrieve custom facts.
+
 ## Release 0.1.2
 
 ### Fixed
@@ -6,5 +14,5 @@
 ## Release 0.1.1
 This is the initial release of the facter task.
 
-**Features
+## Features
 - Allows the retrieval of a fact from a node.
