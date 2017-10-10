@@ -2,6 +2,7 @@
 
 ### Fixed
 - Readme updates.
+- noop metadata
 
 ### Features
 - Retrieve custom facts.
