@@ -5,7 +5,18 @@ require 'json'
 require 'open3'
 
 def get(fact)
-  cmd_string = "facter -p #{fact}"
+  if ENV.has_key? 'Path' then
+    facter = '"C:\Program Files\Puppet Labs\Puppet\bin\facter"'
+    ENV['Path'].split(";").each do |e|
+      if %r{Puppet\\bin} =~ e then
+        facter = "\"#{e}\\facter\""
+      end
+    end
+  else
+    facter = '/opt/puppetlabs/puppet/bin/facter'
+  end
+
+  cmd_string = "#{facter} -p #{fact}"
   stdout, stderr, status = Open3.capture3(cmd_string)
   raise Puppet::Error, stderr if status != 0
   { status: stdout.strip }
