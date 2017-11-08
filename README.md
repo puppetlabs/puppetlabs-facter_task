@@ -30,7 +30,7 @@ To run a facter_task task, use the task command, specifying the fact you want to
 For example, to check the operating system family on a machine, run:
 
 * With PE, run `puppet task run facter_task fact=osfamily --nodes neptune`
-* With Bolt, run `bolt task run facter_task fact=osfamily --nodes neptune --modules ~/modules`
+* With Bolt, run `bolt task run facter_task fact=osfamily --nodes neptune --modulepath ~/modules`
 
 You can also run tasks in the PE console. See PE task documentation for complete information.
 
