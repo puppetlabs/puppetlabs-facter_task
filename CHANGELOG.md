@@ -1,3 +1,8 @@
+## Release 0.1.4
+
+### Fixed
+- issue with Facter path ([FM-6472](https://tickets.puppet.com/browse/FM-6472))
+
 ## Release 0.1.3
 
 ### Fixed
