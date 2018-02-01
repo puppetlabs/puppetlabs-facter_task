@@ -1,3 +1,9 @@
+## Release 0.1.5
+Security release for CVE-2018-6508
+
+### Fixed
+- init task vulnerability to arbitrary remote code execution
+
 ## Release 0.1.4
 
 ### Fixed
