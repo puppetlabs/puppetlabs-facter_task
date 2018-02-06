@@ -16,8 +16,7 @@ def get(fact)
     facter = '/opt/puppetlabs/puppet/bin/facter'
   end
 
-  cmd_string = "#{facter} -p #{fact}"
-  stdout, stderr, status = Open3.capture3(cmd_string)
+  stdout, stderr, status = Open3.capture3(facter, '-p', fact)
   raise Puppet::Error, stderr if status != 0
   { status: stdout.strip }
 end
