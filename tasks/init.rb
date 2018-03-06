@@ -5,10 +5,10 @@ require 'json'
 require 'open3'
 
 def get(fact)
-  if ENV.has_key? 'Path' then
+  if ENV.key? 'Path'
     facter = '"C:\Program Files\Puppet Labs\Puppet\bin\facter"'
-    ENV['Path'].split(";").each do |e|
-      if %r{Puppet\\bin} =~ e then
+    ENV['Path'].split(';').each do |e|
+      if %r{Puppet\\bin} =~ e
         facter = "\"#{e}\\facter\""
       end
     end
