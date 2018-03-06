@@ -1,3 +1,9 @@
+## Release 0.2.0
+Conversion of the module using PDK 1.4.1
+
+### Changed
+- The module has been converted using the PDK version 1.4.1, alongside the addition of some relevant Rubocop fixes.
+
 ## Release 0.1.5
 Security release for CVE-2018-6508
 
