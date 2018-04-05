@@ -10,7 +10,7 @@ install_bolt_on(hosts) unless pe_install?
 install_module_on(hosts)
 install_module_dependencies_on(hosts)
 
-UNSUPPORTED_PLATFORMS = %w[Windows Solaris AIX].freeze
+UNSUPPORTED_PLATFORMS = %w[Solaris AIX].freeze
 
 RSpec.configure do |c|
   # Readable test descriptions
