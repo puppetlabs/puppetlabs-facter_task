@@ -24,9 +24,11 @@ def get(fact)
   # Fall back to PATH lookup if puppet-agent isn't installed
   facter = 'facter' unless File.exist?(facter)
 
-  stdout, stderr, status = Open3.capture3(facter, '-p', fact)
-  raise Puppet::Error, stderr if status != 0
-  { status: stdout.strip }
+  cmd = [facter, '-p', '--json']
+  cmd << fact if fact
+  stdout, stderr, status = Open3.capture3(*cmd)
+  raise stderr if status != 0
+  stdout
 end
 
 params = JSON.parse(STDIN.read)
@@ -34,9 +36,9 @@ fact = params['fact']
 
 begin
   result = get(fact)
-  puts result.to_json
+  puts result
   exit 0
-rescue Puppet::Error => e
-  puts({ status: 'failure', error: e.message }.to_json)
+rescue => e
+  puts({ _error: { kind: 'facter_task/failure', msg: e.message } }.to_json)
   exit 1
 end
