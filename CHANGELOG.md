@@ -1,3 +1,9 @@
+## Release 0.2.1
+Patch release for Windows path resolution.
+
+### Fixed
+- The way in which facter\_task builds the path to the Windows facter executable ([MODULES-5738](https://tickets.puppet.com/browse/MODULES-5738))
+
 ## Release 0.2.0
 Conversion of the module using PDK 1.4.1
 
