@@ -1,3 +1,12 @@
+## Release 0.3.0
+This breaking release changes the return format to always be structured json instead of unformatted strings. It also allows fetching all facts.
+
+### Changed
+- Make the format always return json instead of strings.
+
+### Added
+- Fetch all facts if no fact to fetch is provided.
+
 ## Release 0.2.1
 Patch release for Windows path resolution.
 
