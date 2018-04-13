@@ -1,9 +1,6 @@
 HOSTS:
   rhel7:
     roles:
-      - master
-      - dashboard
-      - database
       - agent
       - default
     platform: el-7-x86_64
