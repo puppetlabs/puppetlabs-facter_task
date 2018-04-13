@@ -194,6 +194,14 @@ This will now download a pre-fabricated image configured in the [default node-se
 install Puppet, copy this module, and install its dependencies per [spec/spec_helper_acceptance.rb](./spec/spec_helper_acceptance.rb)
 and then run all the tests under [spec/acceptance](./spec/acceptance).
 
+A specific node set can be selected by setting the `BEAKER_set` environment variable
+
+```shell
+% export BEAKER_set=spec/acceptance/nodesets/centos-7-x64
+```
+
+If using a VM pooler node set, a password must be set via `BEAKER_password`.
+
 ## Writing Tests
 
 ### Unit Tests
