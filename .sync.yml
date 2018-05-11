@@ -34,3 +34,6 @@ Gemfile:
 Rakefile:
   requires:
     - puppet-lint/tasks/puppet-lint
+
+.gitlab-ci.yml:
+  unmanaged: true
