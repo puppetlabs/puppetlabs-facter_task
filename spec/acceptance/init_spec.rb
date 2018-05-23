@@ -26,7 +26,7 @@ describe 'facter_task task' do
     it 'gets all facts' do
       result = run_task(task_name: 'facter_task', format: 'json')
       expect(result['status']).to eq('success')
-      expect(result['result']).to include('os', 'networking', 'kernel')
+      expect(result['result']).to include('memory', 'is_virtual', 'kernel')
     end
 
     it 'fails cleanly' do
