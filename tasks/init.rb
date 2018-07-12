@@ -1,6 +1,5 @@
 #!/opt/puppetlabs/puppet/bin/ruby
 
-require 'puppet'
 require 'json'
 require 'open3'
 
@@ -9,8 +8,10 @@ def get(fact)
     require 'win32/registry'
     begin
       installed_dir = Win32::Registry::HKEY_LOCAL_MACHINE.open('SOFTWARE\Puppet Labs\Puppet') do |reg|
-        dir = reg['RememberedInstallDir64']
-        break dir if File.exist?(dir)
+        if reg.keys.include?('RememberedInstallDir64')
+          dir = reg['RememberedInstallDir64']
+          break dir if File.exist?(dir)
+        end
         reg['RememberedInstallDir']
       end
       facter = File.join(installed_dir, 'bin', 'facter.bat')
