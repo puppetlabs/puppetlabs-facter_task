@@ -40,7 +40,7 @@ def get(fact)
   cmd = [facter, '-p', '--json']
   cmd << fact if fact
   stdout, stderr, status = Open3.capture3(*cmd)
-  raise stderr if status != 0
+  raise "Exit #{status.exitstatus} running #{cmd.join(' ')}: #{stderr}" if status != 0
   stdout
 end
 
