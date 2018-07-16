@@ -48,8 +48,8 @@ params = JSON.parse(STDIN.read)
 fact = params['fact']
 
 begin
-  result = get(fact)
-  puts result
+  result = JSON.parse(get(fact))
+  puts result.to_json
   exit 0
 rescue => e
   puts({ _error: { kind: 'facter_task/failure', msg: e.message } }.to_json)
