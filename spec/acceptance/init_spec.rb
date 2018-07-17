@@ -32,8 +32,10 @@ describe 'facter_task task' do
     it 'fails cleanly' do
       result = run_task(task_name: 'facter_task', params: 'fact=--foo', format: 'json')
       expect(result['status']).to eq('failure')
-      expect(result['result']['_error']).to eq('kind' => 'facter_task/failure',
-                                               'msg' => "error: unrecognised option '--foo'\n")
+      expect(result['result']['_error']['kind']).to eq('facter_task/failure')
+      expect(result['result']['_error']['msg']).to match(
+        %r{Exit 1 running .*bin/facter.* -p --json --foo: error: unrecognised option '--foo'},
+      )
     end
   end
 end
