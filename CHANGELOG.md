@@ -1,3 +1,10 @@
+## Release 0.3.1
+Patch release for Windows path resolution on 32-bit
+
+### Fixed
+- The way in which facter\_task builds the path to the Windows facter executable on 32-bit Windows ([MODULES-7419](https://tickets.puppetlabs.com/browse/MODULES-7419))
+- Provides a clearer error message when running tasks fails.
+
 ## Release 0.3.0
 This breaking release changes the return format to always be structured json instead of unformatted strings. It also allows fetching all facts.
 
