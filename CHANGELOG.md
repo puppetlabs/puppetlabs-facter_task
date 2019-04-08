@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [0.4.1](https://github.com/puppetlabs/puppetlabs-facter_task/tree/0.4.1) (2019-04-05)
+
+[Full Changelog](https://github.com/puppetlabs/puppetlabs-facter_task/compare/0.4.0...0.4.1)
+
+### Fixed
+
+- pdksync - \(FM-7655\) Fix rubygems-update for ruby \< 2.3 [\#55](https://github.com/puppetlabs/puppetlabs-facter_task/pull/55) ([tphoney](https://github.com/tphoney))
+
 ## [0.4.0](https://github.com/puppetlabs/puppetlabs-facter_task/tree/0.4.0) (2018-09-28)
 
 [Full Changelog](https://github.com/puppetlabs/puppetlabs-facter_task/compare/0.3.1...0.4.0)
