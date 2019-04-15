@@ -5,7 +5,9 @@
   "summary": "Tasks that inspect the value of system facts",
   "license": "Apache-2.0",
   "source": "https://github.com/puppetlabs/puppetlabs-facter_task",
-  "dependencies": [],
+  "dependencies": [
+
+  ],
   "operatingsystem_support": [
     {
       "operatingsystem": "Debian",
@@ -63,7 +65,7 @@
     }
   ],
   "description": "Tasks that inspect the value of system facts",
-  "pdk-version": "1.8.0",
-  "template-url": "https://github.com/puppetlabs/pdk-templates",
-  "template-ref": "heads/master-0-gfde5699"
+  "pdk-version": "1.10.0",
+  "template-url": "https://github.com/puppetlabs/pdk-templates#master",
+  "template-ref": "heads/master-0-gf778803"
 }
