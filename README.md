@@ -3,18 +3,26 @@
 
 #### Table of Contents
 
-1. [Description](#description)
-2. [Requirements](#requirements)
-3. [Usage - Configuration options and additional functionality](#usage)
-4. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
-5. [Limitations - OS compatibility, etc.](#limitations)
-6. [Getting help - Some Helpful commands](#getting-help)
+1. [Overview](#overview)
+2. [Module Description](#module-description)
+3. [Setup](#setup)
+     * [Requirements](#requirements)
+4. [Usage](#usage)
+5. [Reference](#reference)
+6. [Limitations](#limitations)
+7. [Development](#development)
 
-## Description
+## Overview
 
-This module provides the facter_task task. This task allows you to discover facts about remote machines in your infrastructure.
+This module provides the facter_task task.
 
-## Requirements
+## Module Description
+
+This task allows you to discover facts about remote machines in your infrastructure.
+
+## Setup
+
+### Requirements
 This module is compatible with Puppet Enterprise and Puppet Bolt.
 
 * To run tasks with Puppet Enterprise, PE 2018.1 or later must be installed on the machine from which you are running task commands. Machines receiving task requests must be Puppet agents.
@@ -22,6 +30,10 @@ This module is compatible with Puppet Enterprise and Puppet Bolt.
 * To run tasks with Puppet Bolt, Bolt 1.0 or later must be installed on the machine from which you are running task commands. Machines receiving task requests must have SSH or WinRM services enabled.
 
 ## Usage
+
+To view the available actions and parameters, on the command line, run `puppet task show facter_task` or see the facter_task module page on the [Forge](https://forge.puppet.com/puppetlabs/facter_task/tasks).
+For a complete list of facts that are supported, see the Puppet [core facts](https://docs.puppet.com/facter/latest/core_facts.html) documentation.
+To show help for the task CLI, run `puppet task run --help` or `bolt task run --help`
 
 To run a facter_task task, use the task command, specifying the fact you want to retrieve.
 
@@ -37,9 +49,7 @@ You can also run tasks in the PE console. See PE task documentation for complete
 
 ## Reference
 
-To view the available actions and parameters, on the command line, run `puppet task show facter_task` or see the facter_task module page on the [Forge](https://forge.puppet.com/puppetlabs/facter_task/tasks).
-
-For a complete list of facts that are supported, see the Puppet [core facts](https://docs.puppet.com/facter/latest/core_facts.html) documentation.
+For information on the classes and types, see the [REFERENCE.md](https://github.com/puppetlabs/puppetlabs-facter_task/blob/master/REFERENCE.md).
 
 ## Limitations
 
@@ -47,9 +57,9 @@ To run acceptance tests against Windows machines locally, ensure that the `BEAKE
 
 For an extensive list of supported operating systems, see [metadata.json](https://github.com/puppetlabs/puppetlabs-facter_task/blob/master/metadata.json)
 
-## Getting Help
+## Development
 
-To display help for the facter_task task, run `puppet task show facter_task`
+Puppet modules on the Puppet Forge are open projects, and community contributions are essential for keeping them great. To contribute to Puppet projects, see our [module contribution guide.](https://github.com/puppetlabs/puppetlabs-facter_task/blob/master/CONTRIBUTING.md)
 
-To show help for the task CLI, run `puppet task run --help` or `bolt task run --help`
+
 
