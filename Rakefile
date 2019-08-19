@@ -4,7 +4,6 @@ require 'puppet-syntax/tasks/puppet-syntax'
 require 'puppet_blacksmith/rake_tasks' if Bundler.rubygems.find_name('puppet-blacksmith').any?
 require 'github_changelog_generator/task' if Bundler.rubygems.find_name('github_changelog_generator').any?
 require 'puppet-strings/tasks' if Bundler.rubygems.find_name('puppet-strings').any?
-require 'puppet-lint/tasks/puppet-lint'
 
 def changelog_user
   return unless Rake.application.top_level_tasks.include? "changelog"
@@ -75,9 +74,4 @@ Gemfile:
 EOM
   end
 end
-
-# spec_prep is required to setup fixtures used by the acceptance tests
-beaker_task = Rake::Task['beaker']
-spec_prep =  Rake::Task['spec_prep']
-beaker_task.enhance(beaker_task.prerequisite_tasks << spec_prep)
 
