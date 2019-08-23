@@ -3,14 +3,16 @@
 
 #### Table of Contents
 
-1. [Overview](#overview)
-2. [Module Description](#module-description)
-3. [Setup](#setup)
-     * [Requirements](#requirements)
-4. [Usage](#usage)
-5. [Reference](#reference)
-6. [Limitations](#limitations)
-7. [Development](#development)
+- [facter_task](#factertask)
+      - [Table of Contents](#Table-of-Contents)
+  - [Overview](#Overview)
+  - [Module Description](#Module-Description)
+  - [Setup](#Setup)
+    - [Requirements](#Requirements)
+  - [Usage](#Usage)
+  - [Reference](#Reference)
+  - [Limitations](#Limitations)
+  - [Development](#Development)
 
 ## Overview
 
@@ -58,6 +60,8 @@ To run acceptance tests against Windows machines locally, ensure that the `BEAKE
 For an extensive list of supported operating systems, see [metadata.json](https://github.com/puppetlabs/puppetlabs-facter_task/blob/master/metadata.json)
 
 ## Development
+
+We are experimenting with a new tool for running acceptance tests. Its name is [puppet_litmus](https://github.com/puppetlabs/puppet_litmus) this replaces beaker as the test runner. To run the acceptance tests follow the instructions from this point [here](https://github.com/puppetlabs/puppet_litmus/wiki/Tutorial:-use-Litmus-to-execute-acceptance-tests-with-a-sample-module-(MoTD)#install-the-necessary-gems-for-the-module).
 
 Puppet modules on the Puppet Forge are open projects, and community contributions are essential for keeping them great. To contribute to Puppet projects, see our [module contribution guide.](https://github.com/puppetlabs/puppetlabs-facter_task/blob/master/CONTRIBUTING.md)
 
