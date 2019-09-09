@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v0.5.0](https://github.com/puppetlabs/puppetlabs-facter_task/tree/v0.5.0) (2019-09-05)
+
+[Full Changelog](https://github.com/puppetlabs/puppetlabs-facter_task/compare/0.4.1...v0.5.0)
+
+### Changed
+
+- pdksync - \(MODULES-8444\) - Raise lower Puppet bound [\#69](https://github.com/puppetlabs/puppetlabs-facter_task/pull/69) ([david22swan](https://github.com/david22swan))
+
+### Added
+
+- FM-8218 Port Module facter\_task to Litmus [\#79](https://github.com/puppetlabs/puppetlabs-facter_task/pull/79) ([sheenaajay](https://github.com/sheenaajay))
+- \(FM-8153\) Add Windows Server 2019 support [\#73](https://github.com/puppetlabs/puppetlabs-facter_task/pull/73) ([eimlav](https://github.com/eimlav))
+- \(FM-8040\) Add RedHat 8 support [\#72](https://github.com/puppetlabs/puppetlabs-facter_task/pull/72) ([eimlav](https://github.com/eimlav))
+- FM-7944 - stringify facter\_task [\#71](https://github.com/puppetlabs/puppetlabs-facter_task/pull/71) ([lionce](https://github.com/lionce))
+
 ## [0.4.1](https://github.com/puppetlabs/puppetlabs-facter_task/tree/0.4.1) (2019-04-05)
 
 [Full Changelog](https://github.com/puppetlabs/puppetlabs-facter_task/compare/0.4.0...0.4.1)
