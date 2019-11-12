@@ -7,8 +7,6 @@
   unmanaged: true
 
 .travis.yml:
-  user: puppet
-  secure: ""
   branches:
     - release
   includes:
