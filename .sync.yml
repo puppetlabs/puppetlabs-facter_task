@@ -7,6 +7,8 @@
   unmanaged: true
 
 .travis.yml:
+  deploy_to_forge:
+    enabled: false
   branches:
     - release
   includes:

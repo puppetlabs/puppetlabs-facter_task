@@ -17,9 +17,6 @@ stages:
   - static
   - spec
   - acceptance
-  -
-    if: tag =~ ^v\d
-    name: deploy
 matrix:
   fast_finish: true
   include:
