@@ -2,13 +2,18 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v0.7.0](https://github.com/puppetlabs/puppetlabs-facter_task/tree/v0.7.0) (2020-01-03)
+
+[Full Changelog](https://github.com/puppetlabs/puppetlabs-facter_task/compare/v0.6.0...v0.7.0)
+
+### Added
+
+- pdksync - "MODULES-10242 Add ubuntu14 support back to the modules" [\#101](https://github.com/puppetlabs/puppetlabs-facter_task/pull/101) ([sheenaajay](https://github.com/sheenaajay))
+- \(FM-8688\) - Addition of support for CentOS 8 [\#97](https://github.com/puppetlabs/puppetlabs-facter_task/pull/97) ([david22swan](https://github.com/david22swan))
+
 ## [v0.6.0](https://github.com/puppetlabs/puppetlabs-facter_task/tree/v0.6.0) (2019-11-11)
 
 [Full Changelog](https://github.com/puppetlabs/puppetlabs-facter_task/compare/v0.5.0...v0.6.0)
-
-### Changed
-
-- pdksync - FM-8499 - remove ubuntu14 support [\#93](https://github.com/puppetlabs/puppetlabs-facter_task/pull/93) ([lionce](https://github.com/lionce))
 
 ## [v0.5.0](https://github.com/puppetlabs/puppetlabs-facter_task/tree/v0.5.0) (2019-09-05)
 
@@ -36,6 +41,10 @@ All notable changes to this project will be documented in this file. The format 
 ## [0.4.0](https://github.com/puppetlabs/puppetlabs-facter_task/tree/0.4.0) (2018-09-28)
 
 [Full Changelog](https://github.com/puppetlabs/puppetlabs-facter_task/compare/0.3.1...0.4.0)
+
+### Changed
+
+- pdksync - FM-8499 - remove ubuntu14 support [\#93](https://github.com/puppetlabs/puppetlabs-facter_task/pull/93) ([lionce](https://github.com/lionce))
 
 ### Added
 
