@@ -9,7 +9,7 @@
   includes:
   - bundler_args: 
     dist: trusty
-    env: PLATFORMS=debian_puppet5
+    env: PLATFORMS=deb_puppet5
     rvm: 2.5.3
     before_script:
     - bundle exec rake 'litmus:provision_list[travis_deb]'
@@ -23,10 +23,38 @@
     stage: acceptance
   - bundler_args: 
     dist: trusty
-    env: PLATFORMS=debian_puppet6
+    env: PLATFORMS=deb_puppet6
     rvm: 2.5.3
     before_script:
     - bundle exec rake 'litmus:provision_list[travis_deb]'
+    - bundle exec bolt command run 'apt-get install wget -y' --inventoryfile inventory.yaml --nodes='localhost*'
+    - bundle exec rake 'litmus:install_agent[puppet6]'
+    - bundle exec rake litmus:install_module
+    script:
+    - bundle exec rake litmus:acceptance:parallel
+    services: docker
+    sudo: required
+    stage: acceptance
+  - bundler_args: 
+    dist: trusty
+    env: PLATFORMS=ub_puppet5
+    rvm: 2.5.3
+    before_script:
+    - bundle exec rake 'litmus:provision_list[travis_ub]'
+    - bundle exec bolt command run 'apt-get install wget -y' --inventoryfile inventory.yaml --nodes='localhost*'
+    - bundle exec rake 'litmus:install_agent[puppet5]'
+    - bundle exec rake litmus:install_module
+    script:
+    - bundle exec rake litmus:acceptance:parallel
+    services: docker
+    sudo: required
+    stage: acceptance
+  - bundler_args: 
+    dist: trusty
+    env: PLATFORMS=ub_puppet6
+    rvm: 2.5.3
+    before_script:
+    - bundle exec rake 'litmus:provision_list[travis_ub]'
     - bundle exec bolt command run 'apt-get install wget -y' --inventoryfile inventory.yaml --nodes='localhost*'
     - bundle exec rake 'litmus:install_agent[puppet6]'
     - bundle exec rake litmus:install_module
