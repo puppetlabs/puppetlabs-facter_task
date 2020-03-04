@@ -31,7 +31,11 @@ describe 'facter_task task' do
       result = run_bolt_task('facter_task', {})
 
       expect(result.exit_code).to eq(0)
-      expect(result['result']).to include('os', 'networking', 'kernel')
+      if ENV['TARGET_HOST'] != 'localhost'
+        expect(result['result']).to include('os', 'networking', 'kernel')
+      else
+        expect(result['result']).to include('os', 'kernel')
+      end
     end
 
     it 'fails cleanly' do
@@ -39,9 +43,15 @@ describe 'facter_task task' do
       result = run_bolt_task('facter_task', params, expect_failures: true)
       expect(result.exit_code).to eq(255)
       expect(result['result']['_error']['kind']).to eq('facter_task/failure')
-      expect(result['result']['_error']['msg']).to match(
-        %r{Exit 1 running .*bin\/facter.* -p --json --foo: .*\n?error: unrecognised option \'--foo\'},
-      )
+      if ENV['TARGET_HOST'] != 'localhost'
+        expect(result['result']['_error']['msg']).to match(
+          %r{Exit 1 running .*bin\/facter.* -p --json --foo: .*\n?error: unrecognised option \'--foo\'},
+        )
+      else
+        expect(result['result']['_error']['msg']).to match(
+          %r{Exit 12 running facter -p --json --foo: invalid option: --foo},
+        )
+      end
     end
   end
 end
