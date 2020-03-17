@@ -43,15 +43,9 @@ describe 'facter_task task' do
       result = run_bolt_task('facter_task', params, expect_failures: true)
       expect(result.exit_code).to eq(255)
       expect(result['result']['_error']['kind']).to eq('facter_task/failure')
-      if ENV['TARGET_HOST'] != 'localhost'
-        expect(result['result']['_error']['msg']).to match(
-          %r{Exit 1 running .*bin\/facter.* -p --json --foo: .*\n?error: unrecognised option \'--foo\'},
-        )
-      else
-        expect(result['result']['_error']['msg']).to match(
-          %r{Exit 12 running facter -p --json --foo: invalid option: --foo},
-        )
-      end
+      expect(result['result']['_error']['msg']).to match(
+        %r{invalid option: --foo|unrecognised option '--foo'},
+      )
     end
   end
 end
