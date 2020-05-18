@@ -1,5 +1,12 @@
 # frozen_string_literal: true
 
+require 'singleton'
+
+class LitmusHelper
+  include Singleton
+  include PuppetLitmus
+end
+
 RSpec.configure do |c|
   c.before :suite do
     config_path = case os[:family]
@@ -14,6 +21,6 @@ RSpec.configure do |c|
       force   => true,
       }
     MANIFEST
-    apply_manifest(config_pp)
+    LitmusHelper.instance.apply_manifest(config_pp)
   end
 end
