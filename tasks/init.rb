@@ -2,6 +2,8 @@
 
 require 'json'
 require 'open3'
+require 'puppet'
+require 'puppet/util/execution'
 
 def get(fact)
   if Gem.win_platform?
@@ -39,9 +41,9 @@ def get(fact)
 
   cmd = [facter, '-p', '--json']
   cmd << fact if fact
-  stdout, stderr, status = Open3.capture3(*cmd)
-  raise "Exit #{status.exitstatus} running #{cmd.join(' ')}: #{stderr}" if status != 0
-  stdout
+  po = Puppet::Util::Execution.execute(cmd, combine: false)
+  raise "Exit #{po.exitstatus} running #{cmd.join(' ')}. STDOUT: #{po}" if po.exitstatus != 0
+  po
 end
 
 params = JSON.parse(STDIN.read)
