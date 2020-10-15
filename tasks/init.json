@@ -1,6 +1,7 @@
 {
   "description": "Inspect the value of system facts",
   "input_method": "stdin",
+  "files": ["facter_task/lib/facts.rb", "facter_task/lib/platform.rb"],
   "parameters": {
     "fact": {
       "description": "The name of the fact to retrieve",
