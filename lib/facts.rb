@@ -1,5 +1,6 @@
-require 'open3'
 require 'json'
+require 'puppet'
+require 'puppet/util/execution'
 
 require_relative 'platform'
 
@@ -20,11 +21,9 @@ class Facts
     facts_command << fact if fact
 
     begin
-      stdout, stderr, status = Open3.capture3(*facts_command)
-      raise "Exit #{status.exitstatus} running #{facts_command}: #{stderr}" if status != 0
-
-      result = parse(stdout)
-      puts result
+      po = Puppet::Util::Execution.execute(facts_command, combine: false)
+      raise "Exit #{po.exitstatus} running #{facts_command.join(' ')}. STDOUT: #{po}" if po.exitstatus != 0
+      puts po
       exit 0
     rescue => e
       puts({ _error: { kind: 'facter_task/failure', msg: e.message } }.to_json)
@@ -57,9 +56,11 @@ class Facts
   # Supported components are facter and puppet,
   # but it can be any executable that supports --version argument
   def component_version(exec)
-    stdout, _stderr, _status = Open3.capture3(exec, '--version')
+    cmd = "#{exec} --version"
+    po = Puppet::Util::Execution.execute(cmd, combine: false)
+    raise "Exit #{po.exitstatus} running #{cmd.join(' ')}. STDOUT: #{po}" if po.exitstatus != 0
 
-    stdout.strip
+    po.strip
   end
 
   # Starting with facter 4 and puppet 7, `facter -p` and `facter --puppet`
