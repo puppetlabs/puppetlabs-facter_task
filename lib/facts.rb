@@ -6,7 +6,7 @@ require_relative 'platform'
 
 # Gathers facts taking into account different combinations of puppet and facter,
 # because fact gathering in done differently depending on puppet and facter versions
-class Facts
+class FactsResolver
   def initialize
     @platform = Platform.new
     @facter_executable = @platform.facter_path
