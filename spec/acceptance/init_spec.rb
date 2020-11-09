@@ -43,9 +43,7 @@ describe 'facter_task task' do
       result = run_bolt_task('facter_task', params, expect_failures: true)
       expect(result.exit_code).to eq(255)
       expect(result['result']['_error']['kind']).to eq('facter_task/failure')
-      expect(result['result']['_error']['msg']).to match(
-        %r{invalid option: --foo|unrecognised option '--foo'},
-      )
+      expect(result['result']['_error']['msg']).to match('running /opt/puppetlabs/puppet/bin/facter -p --json --foo')
     end
   end
 end
