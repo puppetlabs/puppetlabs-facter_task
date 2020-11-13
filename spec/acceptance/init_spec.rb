@@ -43,7 +43,7 @@ describe 'facter_task task' do
       result = run_bolt_task('facter_task', params, expect_failures: true)
       expect(result.exit_code).to eq(255)
       expect(result['result']['_error']['kind']).to eq('facter_task/failure')
-      expect(result['result']['_error']['msg']).to match('See man page, README, or docs for more details')
+      expect(result['result']['_error']['msg']).to match('Exit 1 running')
     end
   end
 end
