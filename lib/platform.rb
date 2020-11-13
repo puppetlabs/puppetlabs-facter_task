@@ -18,8 +18,8 @@ class Platform
             # rubocop:enable Style/RescueModifier
           end
         rescue Win32::Registry::Error
-          # Rescue missing registry path
-          ''
+          # Rescue missing registry path and return ruby bin path for installed gems
+          File.dirname(Gem.ruby).sub('/bin', '')
         end
 
       @platform = :windows_like
