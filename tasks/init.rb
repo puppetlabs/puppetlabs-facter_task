@@ -5,5 +5,5 @@ require_relative '../lib/facts'
 params = JSON.parse(STDIN.read)
 fact = params['fact']
 
-facts = Facts.new
+facts = FactsResolver.new
 facts.resolve(fact)
