@@ -2,9 +2,27 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v0.8.0](https://github.com/puppetlabs/puppetlabs-facter_task/tree/v0.8.0) (2020-11-16)
+
+[Full Changelog](https://github.com/puppetlabs/puppetlabs-facter_task/compare/v0.7.0...v0.8.0)
+
+### Added
+
+- \(MODULES-10833\) Add support for puppet facts show [\#134](https://github.com/puppetlabs/puppetlabs-facter_task/pull/134) ([IrimieBogdan](https://github.com/IrimieBogdan))
+- pdksync - \(IAC-973\) - Update travis/appveyor to run on new default branch main [\#127](https://github.com/puppetlabs/puppetlabs-facter_task/pull/127) ([david22swan](https://github.com/david22swan))
+
+### Fixed
+
+- \(MODULES-10602\) workaround for "765: unexpected token at ''" error [\#135](https://github.com/puppetlabs/puppetlabs-facter_task/pull/135) ([carabasdaniel](https://github.com/carabasdaniel))
+- \(IAC-986\) - Removal of inappropriate terminology [\#132](https://github.com/puppetlabs/puppetlabs-facter_task/pull/132) ([david22swan](https://github.com/david22swan))
+
 ## [v0.7.0](https://github.com/puppetlabs/puppetlabs-facter_task/tree/v0.7.0) (2020-01-03)
 
 [Full Changelog](https://github.com/puppetlabs/puppetlabs-facter_task/compare/v0.6.0...v0.7.0)
+
+### Changed
+
+- pdksync - FM-8499 - remove ubuntu14 support [\#93](https://github.com/puppetlabs/puppetlabs-facter_task/pull/93) ([lionce](https://github.com/lionce))
 
 ### Added
 
@@ -41,10 +59,6 @@ All notable changes to this project will be documented in this file. The format 
 ## [0.4.0](https://github.com/puppetlabs/puppetlabs-facter_task/tree/0.4.0) (2018-09-28)
 
 [Full Changelog](https://github.com/puppetlabs/puppetlabs-facter_task/compare/0.3.1...0.4.0)
-
-### Changed
-
-- pdksync - FM-8499 - remove ubuntu14 support [\#93](https://github.com/puppetlabs/puppetlabs-facter_task/pull/93) ([lionce](https://github.com/lionce))
 
 ### Added
 
