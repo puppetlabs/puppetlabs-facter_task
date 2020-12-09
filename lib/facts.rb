@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'json'
 require 'puppet'
 require 'puppet/util/execution'
@@ -38,9 +40,9 @@ class FactsResolver
   def determine_facts_command
     facter_version = component_version(@facter_executable)
 
-    if facter_version =~ %r{^[0-2]\.}
+    if facter_version.match?(%r{^[0-2]\.})
       [@facter_executable, '-p', '--json']
-    elsif facter_version =~ %r{^3\.}
+    elsif facter_version.match?(%r{^3\.})
       [@facter_executable, '-p', '--json', '--show-legacy']
     else
       # facter 4
@@ -68,7 +70,7 @@ class FactsResolver
   def determine_command_for_facter_4
     puppet_version = component_version(@puppet_executable)
 
-    if puppet_version =~ %r{^6\.}
+    if puppet_version.match?(%r{^6\.})
       # puppet 6 with facter 4
       [@facter_executable, '--json', '--show-legacy']
     else

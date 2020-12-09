@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Used for detecting facter and puppet paths based
 # on the platform we are running on.
 class Platform
