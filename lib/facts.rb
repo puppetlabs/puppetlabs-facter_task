@@ -46,7 +46,7 @@ class FactsResolver
       [@facter_executable, '-p', '--json', '--show-legacy']
     else
       # facter 4
-      determine_command_for_facter_4
+      determine_command_for_facter4
     end
   end
 
@@ -67,7 +67,7 @@ class FactsResolver
 
   # Starting with facter 4 and puppet 7, `facter -p` and `facter --puppet`
   # have been replaced by `puppet facts show`
-  def determine_command_for_facter_4
+  def determine_command_for_facter4
     puppet_version = component_version(@puppet_executable)
 
     if puppet_version.match?(%r{^6\.})
