@@ -1,6 +1,6 @@
 {
   "name": "puppetlabs-facter_task",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "author": "puppetlabs",
   "summary": "Tasks that inspect the value of system facts",
   "license": "Apache-2.0",
