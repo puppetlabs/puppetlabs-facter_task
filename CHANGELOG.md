@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v1.0.0](https://github.com/puppetlabs/puppetlabs-facter_task/tree/v1.0.0) (2021-02-27)
+
+[Full Changelog](https://github.com/puppetlabs/puppetlabs-facter_task/compare/v0.9.0...v1.0.0)
+
+### Changed
+
+- pdksync - Remove Puppet 5 from testing and bump minimal version to 6.0.0 [\#151](https://github.com/puppetlabs/puppetlabs-facter_task/pull/151) ([carabasdaniel](https://github.com/carabasdaniel))
+
 ## [v0.9.0](https://github.com/puppetlabs/puppetlabs-facter_task/tree/v0.9.0) (2021-01-18)
 
 [Full Changelog](https://github.com/puppetlabs/puppetlabs-facter_task/compare/v.0.8.0...v0.9.0)
@@ -17,7 +25,7 @@ All notable changes to this project will be documented in this file. The format 
 ### Added
 
 - \(MODULES-10833\) Add support for puppet facts show [\#134](https://github.com/puppetlabs/puppetlabs-facter_task/pull/134) ([IrimieBogdan](https://github.com/IrimieBogdan))
-- \(FM-8688\) - Addition of support for CentOS 8 [\#97](https://github.com/puppetlabs/puppetlabs-facter_task/pull/97) ([david22swan](https://github.com/david22swan))
+- pdksync - \(IAC-973\) - Update travis/appveyor to run on new default branch main [\#127](https://github.com/puppetlabs/puppetlabs-facter_task/pull/127) ([david22swan](https://github.com/david22swan))
 
 ### Fixed
 
@@ -31,10 +39,15 @@ All notable changes to this project will be documented in this file. The format 
 ### Added
 
 - pdksync - "MODULES-10242 Add ubuntu14 support back to the modules" [\#101](https://github.com/puppetlabs/puppetlabs-facter_task/pull/101) ([sheenaajay](https://github.com/sheenaajay))
+- \(FM-8688\) - Addition of support for CentOS 8 [\#97](https://github.com/puppetlabs/puppetlabs-facter_task/pull/97) ([david22swan](https://github.com/david22swan))
 
 ## [v0.6.0](https://github.com/puppetlabs/puppetlabs-facter_task/tree/v0.6.0) (2019-11-11)
 
 [Full Changelog](https://github.com/puppetlabs/puppetlabs-facter_task/compare/v0.5.0...v0.6.0)
+
+### Changed
+
+- pdksync - FM-8499 - remove ubuntu14 support [\#93](https://github.com/puppetlabs/puppetlabs-facter_task/pull/93) ([lionce](https://github.com/lionce))
 
 ## [v0.5.0](https://github.com/puppetlabs/puppetlabs-facter_task/tree/v0.5.0) (2019-09-05)
 
@@ -42,12 +55,10 @@ All notable changes to this project will be documented in this file. The format 
 
 ### Changed
 
-- pdksync - FM-8499 - remove ubuntu14 support [\#93](https://github.com/puppetlabs/puppetlabs-facter_task/pull/93) ([lionce](https://github.com/lionce))
 - pdksync - \(MODULES-8444\) - Raise lower Puppet bound [\#69](https://github.com/puppetlabs/puppetlabs-facter_task/pull/69) ([david22swan](https://github.com/david22swan))
 
 ### Added
 
-- pdksync - \(IAC-973\) - Update travis/appveyor to run on new default branch main [\#127](https://github.com/puppetlabs/puppetlabs-facter_task/pull/127) ([david22swan](https://github.com/david22swan))
 - FM-8218 Port Module facter\_task to Litmus [\#79](https://github.com/puppetlabs/puppetlabs-facter_task/pull/79) ([sheenaajay](https://github.com/sheenaajay))
 - \(FM-8153\) Add Windows Server 2019 support [\#73](https://github.com/puppetlabs/puppetlabs-facter_task/pull/73) ([eimlav](https://github.com/eimlav))
 - \(FM-8040\) Add RedHat 8 support [\#72](https://github.com/puppetlabs/puppetlabs-facter_task/pull/72) ([eimlav](https://github.com/eimlav))
