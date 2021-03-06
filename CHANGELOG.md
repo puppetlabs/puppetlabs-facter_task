@@ -8,7 +8,12 @@ All notable changes to this project will be documented in this file. The format 
 
 ### Changed
 
+- pdksync - \(MAINT\) Remove RHEL 5 family support [\#154](https://github.com/puppetlabs/puppetlabs-facter_task/pull/154) ([sanfrancrisko](https://github.com/sanfrancrisko))
 - pdksync - Remove Puppet 5 from testing and bump minimal version to 6.0.0 [\#151](https://github.com/puppetlabs/puppetlabs-facter_task/pull/151) ([carabasdaniel](https://github.com/carabasdaniel))
+
+### Added
+
+- \(MODULES-10833\) Add support for puppet facts show [\#134](https://github.com/puppetlabs/puppetlabs-facter_task/pull/134) ([IrimieBogdan](https://github.com/IrimieBogdan))
 
 ## [v0.9.0](https://github.com/puppetlabs/puppetlabs-facter_task/tree/v0.9.0) (2021-01-18)
 
@@ -24,7 +29,6 @@ All notable changes to this project will be documented in this file. The format 
 
 ### Added
 
-- \(MODULES-10833\) Add support for puppet facts show [\#134](https://github.com/puppetlabs/puppetlabs-facter_task/pull/134) ([IrimieBogdan](https://github.com/IrimieBogdan))
 - pdksync - \(IAC-973\) - Update travis/appveyor to run on new default branch main [\#127](https://github.com/puppetlabs/puppetlabs-facter_task/pull/127) ([david22swan](https://github.com/david22swan))
 
 ### Fixed
