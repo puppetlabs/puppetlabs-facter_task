@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file. The format 
 
 ### Changed
 
+- pdksync - \(MAINT\) Remove RHEL 5 family support [\#154](https://github.com/puppetlabs/puppetlabs-facter_task/pull/154) ([sanfrancrisko](https://github.com/sanfrancrisko))
 - pdksync - Remove Puppet 5 from testing and bump minimal version to 6.0.0 [\#151](https://github.com/puppetlabs/puppetlabs-facter_task/pull/151) ([carabasdaniel](https://github.com/carabasdaniel))
 
 ## [v0.9.0](https://github.com/puppetlabs/puppetlabs-facter_task/tree/v0.9.0) (2021-01-18)
