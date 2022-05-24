@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v1.2.0](https://github.com/puppetlabs/puppetlabs-facter_task/tree/v1.2.0) (2022-05-23)
+
+[Full Changelog](https://github.com/puppetlabs/puppetlabs-facter_task/compare/v1.1.0...v1.2.0)
+
+### Added
+
+- pdksync - \(FM-8922\) - Add Support for Windows 2022 [\#184](https://github.com/puppetlabs/puppetlabs-facter_task/pull/184) ([david22swan](https://github.com/david22swan))
+- pdksync - \(IAC-1753\) - Add Support for AlmaLinux 8 [\#179](https://github.com/puppetlabs/puppetlabs-facter_task/pull/179) ([david22swan](https://github.com/david22swan))
+- pdksync - \(IAC-1751\) - Add Support for Rocky 8 [\#178](https://github.com/puppetlabs/puppetlabs-facter_task/pull/178) ([david22swan](https://github.com/david22swan))
+
+### Fixed
+
+- pdksync - \(GH-iac-334\) Remove Support for Ubuntu 14.04/16.04 [\#187](https://github.com/puppetlabs/puppetlabs-facter_task/pull/187) ([david22swan](https://github.com/david22swan))
+- pdksync - \(IAC-1787\) Remove Support for CentOS 6 [\#182](https://github.com/puppetlabs/puppetlabs-facter_task/pull/182) ([david22swan](https://github.com/david22swan))
+- pdksync - \(IAC-1598\) - Remove Support for Debian 8 [\#177](https://github.com/puppetlabs/puppetlabs-facter_task/pull/177) ([david22swan](https://github.com/david22swan))
+
 ## [v1.1.0](https://github.com/puppetlabs/puppetlabs-facter_task/tree/v1.1.0) (2021-08-25)
 
 [Full Changelog](https://github.com/puppetlabs/puppetlabs-facter_task/compare/v1.0.0...v1.1.0)
@@ -35,7 +51,7 @@ All notable changes to this project will be documented in this file. The format 
 
 ### Added
 
-- \(MODULES-10833\) Add support for puppet facts show [\#134](https://github.com/puppetlabs/puppetlabs-facter_task/pull/134) ([IrimieBogdan](https://github.com/IrimieBogdan))
+- \(MODULES-10833\) Add support for puppet facts show [\#134](https://github.com/puppetlabs/puppetlabs-facter_task/pull/134) ([BogdanIrimie](https://github.com/BogdanIrimie))
 - pdksync - \(IAC-973\) - Update travis/appveyor to run on new default branch main [\#127](https://github.com/puppetlabs/puppetlabs-facter_task/pull/127) ([david22swan](https://github.com/david22swan))
 
 ### Fixed
