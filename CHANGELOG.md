@@ -2,7 +2,20 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
-## [v1.2.0](https://github.com/puppetlabs/puppetlabs-facter_task/tree/v1.2.0) (2022-05-23)
+## [v1.3.0](https://github.com/puppetlabs/puppetlabs-facter_task/tree/v1.3.0) (2022-10-03)
+
+[Full Changelog](https://github.com/puppetlabs/puppetlabs-facter_task/compare/v1.2.0...v1.3.0)
+
+### Added
+
+- pdksync - \(GH-cat-11\) Certify Support for Ubuntu 22.04 [\#197](https://github.com/puppetlabs/puppetlabs-facter_task/pull/197) ([david22swan](https://github.com/david22swan))
+- pdksync - \(GH-cat-12\) Add Support for Redhat 9 [\#196](https://github.com/puppetlabs/puppetlabs-facter_task/pull/196) ([david22swan](https://github.com/david22swan))
+
+### Fixed
+
+- \(MAINT\) Drop support for Windows Server 2008 R2. [\#198](https://github.com/puppetlabs/puppetlabs-facter_task/pull/198) ([jordanbreen28](https://github.com/jordanbreen28))
+
+## [v1.2.0](https://github.com/puppetlabs/puppetlabs-facter_task/tree/v1.2.0) (2022-05-24)
 
 [Full Changelog](https://github.com/puppetlabs/puppetlabs-facter_task/compare/v1.1.0...v1.2.0)
 
