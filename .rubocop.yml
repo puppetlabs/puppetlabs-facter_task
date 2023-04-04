@@ -94,3 +94,5 @@ RSpec/DescribeClass:
     - '**/spec/system/**/*'
     - '**/spec/views/**/*'
     - 'spec/acceptance/init_spec.rb'
+RSpec/ExampleLength:
+  Max: 7
