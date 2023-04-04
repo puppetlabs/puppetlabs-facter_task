@@ -86,3 +86,11 @@ Style/WordArray:
   EnforcedStyle: brackets
 Metrics/MethodLength:
   Max: 17
+RSpec/DescribeClass:
+  Exclude:
+    - '**/spec/features/**/*'
+    - '**/spec/requests/**/*'
+    - '**/spec/routing/**/*'
+    - '**/spec/system/**/*'
+    - '**/spec/views/**/*'
+    - 'spec/acceptance/init_spec.rb'

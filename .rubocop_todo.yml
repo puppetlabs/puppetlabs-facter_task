@@ -19,14 +19,7 @@
 
 # Offense count: 1
 # Configuration parameters: IgnoredMetadata.
-# RSpec/DescribeClass:
-#   Exclude:
-#     - '**/spec/features/**/*'
-#     - '**/spec/requests/**/*'
-#     - '**/spec/routing/**/*'
-#     - '**/spec/system/**/*'
-#     - '**/spec/views/**/*'
-#     - 'spec/acceptance/init_spec.rb'
+
 
 # Offense count: 2
 # Configuration parameters: CountAsOne.
