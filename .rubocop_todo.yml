@@ -1,12 +1,6 @@
-# Offense count: 4
-# RSpec/MultipleExpectations:
-#   Max: 4
-
-# Offense count: 1
-# This cop supports unsafe autocorrection (--autocorrect-all).
-Style/GlobalStdStream:
-  Exclude:
-    - 'tasks/init.rb'
+# Style/GlobalStdStream:
+#   Exclude:
+#     - 'tasks/init.rb'
 
 # Offense count: 1
 Style/MixinUsage:
