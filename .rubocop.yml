@@ -84,8 +84,6 @@ Style/Documentation:
   - spec/**/*
 Style/WordArray:
   EnforcedStyle: brackets
-Metrics/MethodLength:
-  Max: 17
 RSpec/DescribeClass:
   Exclude:
     - '**/spec/features/**/*'
@@ -94,7 +92,3 @@ RSpec/DescribeClass:
     - '**/spec/system/**/*'
     - '**/spec/views/**/*'
     - 'spec/acceptance/init_spec.rb'
-RSpec/ExampleLength:
-  Max: 7
-RSpec/MultipleExpectations:
-  Max: 4
