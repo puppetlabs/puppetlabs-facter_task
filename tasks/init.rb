@@ -3,7 +3,7 @@
 
 require_relative '../lib/facts'
 
-params = JSON.parse(STDIN.read)
+params = JSON.parse($stdin.read)
 fact = params['fact']
 
 facts = FactsResolver.new
