@@ -25,6 +25,7 @@ class FactsResolver
     begin
       po = Puppet::Util::Execution.execute(facts_command, combine: false)
       raise "Exit #{po.exitstatus} running #{facts_command.join(' ')}. STDOUT: #{po}" if po.exitstatus != 0
+
       puts po
       exit 0
     rescue => e
