@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v1.3.1](https://github.com/puppetlabs/puppetlabs-facter_task/tree/v1.3.1) (2023-04-04)
+
+[Full Changelog](https://github.com/puppetlabs/puppetlabs-facter_task/compare/v1.3.0...v1.3.1)
+
+### Fixed
+
+- pdksync - \(CONT-189\) Remove support for RedHat6 / OracleLinux6 [\#203](https://github.com/puppetlabs/puppetlabs-facter_task/pull/203) ([david22swan](https://github.com/david22swan))
+- pdksync - \(CONT-130\) - Dropping Support for Debian 9 [\#200](https://github.com/puppetlabs/puppetlabs-facter_task/pull/200) ([jordanbreen28](https://github.com/jordanbreen28))
+
 ## [v1.3.0](https://github.com/puppetlabs/puppetlabs-facter_task/tree/v1.3.0) (2022-10-03)
 
 [Full Changelog](https://github.com/puppetlabs/puppetlabs-facter_task/compare/v1.2.0...v1.3.0)
@@ -50,6 +59,10 @@ All notable changes to this project will be documented in this file. The format 
 - pdksync - \(MAINT\) Remove RHEL 5 family support [\#154](https://github.com/puppetlabs/puppetlabs-facter_task/pull/154) ([sanfrancrisko](https://github.com/sanfrancrisko))
 - pdksync - Remove Puppet 5 from testing and bump minimal version to 6.0.0 [\#151](https://github.com/puppetlabs/puppetlabs-facter_task/pull/151) ([carabasdaniel](https://github.com/carabasdaniel))
 
+### Fixed
+
+- \(MODULES-10602\) workaround for "765: unexpected token at ''" error [\#135](https://github.com/puppetlabs/puppetlabs-facter_task/pull/135) ([carabasdaniel](https://github.com/carabasdaniel))
+
 ## [v0.9.0](https://github.com/puppetlabs/puppetlabs-facter_task/tree/v0.9.0) (2021-01-18)
 
 [Full Changelog](https://github.com/puppetlabs/puppetlabs-facter_task/compare/v.0.8.0...v0.9.0)
@@ -69,7 +82,6 @@ All notable changes to this project will be documented in this file. The format 
 
 ### Fixed
 
-- \(MODULES-10602\) workaround for "765: unexpected token at ''" error [\#135](https://github.com/puppetlabs/puppetlabs-facter_task/pull/135) ([carabasdaniel](https://github.com/carabasdaniel))
 - \(IAC-986\) - Removal of inappropriate terminology [\#132](https://github.com/puppetlabs/puppetlabs-facter_task/pull/132) ([david22swan](https://github.com/david22swan))
 
 ## [v0.7.0](https://github.com/puppetlabs/puppetlabs-facter_task/tree/v0.7.0) (2020-01-03)
