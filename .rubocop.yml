@@ -96,3 +96,5 @@ RSpec/DescribeClass:
     - 'spec/acceptance/init_spec.rb'
 RSpec/ExampleLength:
   Max: 7
+RSpec/MultipleExpectations:
+  Max: 4

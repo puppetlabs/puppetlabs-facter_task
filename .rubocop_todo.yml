@@ -1,11 +1,6 @@
-# Offense count: 2
-# Configuration parameters: CountAsOne.
-# RSpec/ExampleLength:
-#   Max: 7
-
 # Offense count: 4
-RSpec/MultipleExpectations:
-  Max: 4
+# RSpec/MultipleExpectations:
+#   Max: 4
 
 # Offense count: 1
 # This cop supports unsafe autocorrection (--autocorrect-all).
