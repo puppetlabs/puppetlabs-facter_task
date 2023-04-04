@@ -28,7 +28,7 @@ class FactsResolver
 
       puts po
       exit 0
-    rescue => e
+    rescue StandardError => e
       puts({ _error: { kind: 'facter_task/failure', msg: e.message } }.to_json)
       exit 1
     end
