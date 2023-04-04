@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v2.0.0](https://github.com/puppetlabs/puppetlabs-facter_task/tree/v2.0.0) (2023-04-04)
+
+[Full Changelog](https://github.com/puppetlabs/puppetlabs-facter_task/compare/v1.3.1...v2.0.0)
+
+### Changed
+
+- \(Cont 778\) -  add puppet 8 support/drop puppet 6 support [\#211](https://github.com/puppetlabs/puppetlabs-facter_task/pull/211) ([jordanbreen28](https://github.com/jordanbreen28))
+
 ## [v1.3.1](https://github.com/puppetlabs/puppetlabs-facter_task/tree/v1.3.1) (2023-04-04)
 
 [Full Changelog](https://github.com/puppetlabs/puppetlabs-facter_task/compare/v1.3.0...v1.3.1)
@@ -44,6 +52,10 @@ All notable changes to this project will be documented in this file. The format 
 
 [Full Changelog](https://github.com/puppetlabs/puppetlabs-facter_task/compare/v1.0.0...v1.1.0)
 
+### Changed
+
+- pdksync - Remove Puppet 5 from testing and bump minimal version to 6.0.0 [\#151](https://github.com/puppetlabs/puppetlabs-facter_task/pull/151) ([carabasdaniel](https://github.com/carabasdaniel))
+
 ### Added
 
 - pdksync - \(IAC-1720\) - Add Support for Ubuntu 20.04 [\#175](https://github.com/puppetlabs/puppetlabs-facter_task/pull/175) ([david22swan](https://github.com/david22swan))
@@ -57,11 +69,6 @@ All notable changes to this project will be documented in this file. The format 
 ### Changed
 
 - pdksync - \(MAINT\) Remove RHEL 5 family support [\#154](https://github.com/puppetlabs/puppetlabs-facter_task/pull/154) ([sanfrancrisko](https://github.com/sanfrancrisko))
-- pdksync - Remove Puppet 5 from testing and bump minimal version to 6.0.0 [\#151](https://github.com/puppetlabs/puppetlabs-facter_task/pull/151) ([carabasdaniel](https://github.com/carabasdaniel))
-
-### Fixed
-
-- \(MODULES-10602\) workaround for "765: unexpected token at ''" error [\#135](https://github.com/puppetlabs/puppetlabs-facter_task/pull/135) ([carabasdaniel](https://github.com/carabasdaniel))
 
 ## [v0.9.0](https://github.com/puppetlabs/puppetlabs-facter_task/tree/v0.9.0) (2021-01-18)
 
@@ -82,6 +89,7 @@ All notable changes to this project will be documented in this file. The format 
 
 ### Fixed
 
+- \(MODULES-10602\) workaround for "765: unexpected token at ''" error [\#135](https://github.com/puppetlabs/puppetlabs-facter_task/pull/135) ([carabasdaniel](https://github.com/carabasdaniel))
 - \(IAC-986\) - Removal of inappropriate terminology [\#132](https://github.com/puppetlabs/puppetlabs-facter_task/pull/132) ([david22swan](https://github.com/david22swan))
 
 ## [v0.7.0](https://github.com/puppetlabs/puppetlabs-facter_task/tree/v0.7.0) (2020-01-03)
@@ -92,6 +100,7 @@ All notable changes to this project will be documented in this file. The format 
 
 - pdksync - "MODULES-10242 Add ubuntu14 support back to the modules" [\#101](https://github.com/puppetlabs/puppetlabs-facter_task/pull/101) ([sheenaajay](https://github.com/sheenaajay))
 - \(FM-8688\) - Addition of support for CentOS 8 [\#97](https://github.com/puppetlabs/puppetlabs-facter_task/pull/97) ([david22swan](https://github.com/david22swan))
+- FM-8218 Port Module facter\_task to Litmus [\#79](https://github.com/puppetlabs/puppetlabs-facter_task/pull/79) ([sheenaajay](https://github.com/sheenaajay))
 
 ## [v0.6.0](https://github.com/puppetlabs/puppetlabs-facter_task/tree/v0.6.0) (2019-11-11)
 
@@ -111,7 +120,6 @@ All notable changes to this project will be documented in this file. The format 
 
 ### Added
 
-- FM-8218 Port Module facter\_task to Litmus [\#79](https://github.com/puppetlabs/puppetlabs-facter_task/pull/79) ([sheenaajay](https://github.com/sheenaajay))
 - \(FM-8153\) Add Windows Server 2019 support [\#73](https://github.com/puppetlabs/puppetlabs-facter_task/pull/73) ([eimlav](https://github.com/eimlav))
 - \(FM-8040\) Add RedHat 8 support [\#72](https://github.com/puppetlabs/puppetlabs-facter_task/pull/72) ([eimlav](https://github.com/eimlav))
 - FM-7944 - stringify facter\_task [\#71](https://github.com/puppetlabs/puppetlabs-facter_task/pull/71) ([lionce](https://github.com/lionce))
