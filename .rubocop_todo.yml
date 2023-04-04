@@ -1,12 +1,6 @@
-# Style/MixinUsage:
+# Style/NegatedIfElseCondition:
 #   Exclude:
-#     - 'spec/spec_helper.rb'
-
-# Offense count: 1
-# This cop supports safe autocorrection (--autocorrect).
-Style/NegatedIfElseCondition:
-  Exclude:
-    - 'spec/acceptance/init_spec.rb'
+#     - 'spec/acceptance/init_spec.rb'
 
 # Offense count: 2
 # This cop supports safe autocorrection (--autocorrect).

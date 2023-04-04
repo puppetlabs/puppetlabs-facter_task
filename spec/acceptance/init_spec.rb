@@ -33,10 +33,10 @@ describe 'facter_task task' do
       result = run_bolt_task('facter_task', {})
 
       expect(result.exit_code).to eq(0)
-      if ENV['TARGET_HOST'] != 'localhost'
-        expect(result['result']).to include('os', 'networking', 'kernel')
-      else
+      if ENV['TARGET_HOST'] == 'localhost'
         expect(result['result']).to include('os', 'kernel')
+      else
+        expect(result['result']).to include('os', 'networking', 'kernel')
       end
     end
 
