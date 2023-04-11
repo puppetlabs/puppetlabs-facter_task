@@ -2,9 +2,9 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
-## [v2.0.0](https://github.com/puppetlabs/puppetlabs-facter_task/tree/v2.0.0) (2023-04-04)
+## [v2.0.1](https://github.com/puppetlabs/puppetlabs-facter_task/tree/v2.0.1) (2023-04-04)
 
-[Full Changelog](https://github.com/puppetlabs/puppetlabs-facter_task/compare/v1.3.1...v2.0.0)
+[Full Changelog](https://github.com/puppetlabs/puppetlabs-facter_task/compare/v1.3.1...v2.0.1)
 
 ### Changed
 
