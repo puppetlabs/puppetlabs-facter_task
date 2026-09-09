@@ -13,7 +13,6 @@ def location_for(place_or_version, fake_version = nil)
   end
 end
 
-gem 'puppet-syntax', git: 'https://github.com/puppetlabs/puppet-syntax', tag: '5.1.0'
 
 group :development do
   gem "json", '= 2.6.1',                         require: false if Gem::Requirement.create(['>= 3.1.0', '< 3.1.3']).satisfied_by?(Gem::Version.new(RUBY_VERSION.dup))
