@@ -5,7 +5,23 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
-## [v2.1.0](https://github.com/puppetlabs/puppetlabs-facter_task/tree/v2.1.0) - 2024-12-10
+## [v3.0.0](https://github.com/puppetlabs/puppetlabs-facter_task/tree/v3.0.0) - 2026-09-15
+
+[Full Changelog](https://github.com/puppetlabs/puppetlabs-facter_task/compare/v2.1.0...v3.0.0)
+
+### Changed
+
+- (CAT-2372) Prepare module for Puppetcore / Drop Support for Puppet 7 [#243](https://github.com/puppetlabs/puppetlabs-facter_task/pull/243) ([SugatD](https://github.com/SugatD))
+
+### Added
+
+- (MODULES-11722) Add Puppet 9 support [#246](https://github.com/puppetlabs/puppetlabs-facter_task/pull/246) ([shubhamshinde360](https://github.com/shubhamshinde360))
+
+### Other
+
+- (CAT-2296) Update github runner image to ubuntu-24.04 [#242](https://github.com/puppetlabs/puppetlabs-facter_task/pull/242) ([shubhamshinde360](https://github.com/shubhamshinde360))
+
+## [v2.1.0](https://github.com/puppetlabs/puppetlabs-facter_task/tree/v2.1.0) - 2024-12-17
 
 [Full Changelog](https://github.com/puppetlabs/puppetlabs-facter_task/compare/v2.0.1...v2.1.0)
 
