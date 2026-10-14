@@ -20,6 +20,14 @@ spec/spec_helper.rb:
 .github/workflows/nightly.yml:
   unmanaged: false
   cron: '20 4 * * *'
+  acceptance_flags:
+    - '--nightly'
+    - '--collection-platform-exclude 9:redhat-7'
+    - '--collection-platform-exclude 9:centos-7'
+    - '--collection-platform-exclude 9:oraclelinux-7'
+    - '--collection-platform-exclude 9:debian-10'
+    - '--collection-platform-exclude 9:ubuntu-18.04'
+    - '--collection-platform-exclude 9:ubuntu-20.04'
 .github/workflows/release.yml:
   unmanaged: false
 .travis.yml:
