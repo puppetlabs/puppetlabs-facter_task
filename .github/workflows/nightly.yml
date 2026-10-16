@@ -13,6 +13,6 @@ jobs:
   Acceptance:
     needs: Spec
     uses: "puppetlabs/cat-github-actions/.github/workflows/module_acceptance.yml@main"
-    secrets: "inherit"
     with:
-      flags: "--nightly"
+      flags: "--nightly --collection-platform-exclude 9:redhat-7 --collection-platform-exclude 9:centos-7 --collection-platform-exclude 9:oraclelinux-7 --collection-platform-exclude 9:debian-10 --collection-platform-exclude 9:ubuntu-18.04 --collection-platform-exclude 9:ubuntu-20.04"
+    secrets: "inherit"
