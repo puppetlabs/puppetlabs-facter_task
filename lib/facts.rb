@@ -22,19 +22,23 @@ class FactsResolver
     facts_command = determine_facts_command
     facts_command << fact if fact
 
-    begin
-      po = Puppet::Util::Execution.execute(facts_command, combine: false)
-      raise "Exit #{po.exitstatus} running #{facts_command.join(' ')}. STDOUT: #{po}" if po.exitstatus != 0
-
-      puts po
-      exit 0
-    rescue StandardError => e
-      puts({ _error: { kind: 'facter_task/failure', msg: e.message } }.to_json)
-      exit 1
-    end
+    execute_facts_command(facts_command)
   end
 
   private
+
+  # Runs the facts command and prints its output,
+  # or a task error if the command fails
+  def execute_facts_command(facts_command)
+    po = Puppet::Util::Execution.execute(facts_command, combine: false)
+    raise "Exit #{po.exitstatus} running #{facts_command.join(' ')}. STDOUT: #{po}" if po.exitstatus != 0
+
+    puts po
+    exit 0
+  rescue StandardError => e
+    puts({ _error: { kind: 'facter_task/failure', msg: e.message } }.to_json)
+    exit 1
+  end
 
   # Determine the command tht will be used to gather facts,
   # this depends on facter version and on puppet version

@@ -6,24 +6,7 @@ class Platform
   def initialize
     if Gem.win_platform?
       require 'win32/registry'
-      @installed_dir =
-        begin
-          Win32::Registry::HKEY_LOCAL_MACHINE.open('SOFTWARE\Puppet Labs\Puppet') do |reg|
-            # rubocop:disable Style/RescueModifier
-            # Rescue missing key
-            dir = reg['RememberedInstallDir64'] rescue ''
-            # Both keys may exist, make sure the dir exists
-            break dir if File.exist?(dir)
-
-            # Rescue missing key
-            reg['RememberedInstallDir'] rescue ''
-            # rubocop:enable Style/RescueModifier
-          end
-        rescue Win32::Registry::Error
-          # Rescue missing registry path and return ruby bin path for installed gems
-          File.dirname(Gem.ruby).sub('/bin', '')
-        end
-
+      @installed_dir = windows_installed_dir
       @platform = :windows_like
     else
       @installed_dir = '/opt/puppetlabs/puppet/bin'
@@ -49,5 +32,25 @@ class Platform
     else
       File.join(@installed_dir, 'bin', 'puppet.bat')
     end
+  end
+
+  private
+
+  # Reads the puppet install dir from the registry
+  def windows_installed_dir
+    Win32::Registry::HKEY_LOCAL_MACHINE.open('SOFTWARE\Puppet Labs\Puppet') do |reg|
+      # rubocop:disable Style/RescueModifier
+      # Rescue missing key
+      dir = reg['RememberedInstallDir64'] rescue ''
+      # Both keys may exist, make sure the dir exists
+      break dir if File.exist?(dir)
+
+      # Rescue missing key
+      reg['RememberedInstallDir'] rescue ''
+      # rubocop:enable Style/RescueModifier
+    end
+  rescue Win32::Registry::Error
+    # Rescue missing registry path and return ruby bin path for installed gems
+    File.dirname(Gem.ruby).sub('/bin', '')
   end
 end
