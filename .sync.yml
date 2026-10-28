@@ -17,6 +17,16 @@ spec/spec_helper.rb:
   unmanaged: false
 .github/workflows/ci.yml:
   unmanaged: false
+  # Puppet 9 ships no agent for these platforms; metadata.json keeps them for Puppet 8.
+  acceptance_flags:
+    - '--nightly'
+    - '--collection-platform-exclude 9:redhat-7'
+    - '--collection-platform-exclude 9:centos-7'
+    - '--collection-platform-exclude 9:centos-8'
+    - '--collection-platform-exclude 9:oraclelinux-7'
+    - '--collection-platform-exclude 9:debian-10'
+    - '--collection-platform-exclude 9:ubuntu-18.04'
+    - '--collection-platform-exclude 9:ubuntu-20.04'
 .github/workflows/nightly.yml:
   unmanaged: false
   cron: '20 4 * * *'
